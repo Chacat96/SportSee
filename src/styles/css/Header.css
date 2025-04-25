@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  background-color: black;
+  padding: 20px;
+}
+.header__logo {
+  object-fit: contain;
+}
+.header__nav {
+  width: 100%;
+}
+.header ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.header li a {
+  color: white;
+  font-size: 24px;
+}

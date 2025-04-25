@@ -1,0 +1,21 @@
+.navBar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 120px;
+  height: 100vh;
+  background-color: black;
+}
+.navBar__icon {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.navBar__copyright {
+  color: white;
+  background-color: black;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
