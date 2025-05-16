@@ -1,9 +1,19 @@
-import { userMainData } from './mockData.js';
+import { userData, performanceData, activityData, averageSessionsData } from './mockData.js';
 
-export async function getUserMainData(userId) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(userMainData);
-    }, 200);
-  });
+export async function getUserData(userId) {
+  const user = userData.find(user => user.id === userId);
+  return user; // Retourne directement l'utilisateur trouvé, pas besoin de .data
 }
+
+export async function getAverageSessions(userId) {
+  return averageSessionsData.find(data => data.userId === userId);
+}
+
+export async function getPerformance(userId) {
+  return performanceData.find(data => data.userId === userId);
+}
+
+export async function getActivity(userId) {
+  return activityData.find(data => data.userId === userId);
+}
+
