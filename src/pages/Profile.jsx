@@ -1,19 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 import { getUserData } from "../services/mock/mockService";
 import React from "react";
+import '../styles/css/Profile.css';
 
 function Profile () {
-  const [userData, setUserData] = React.useState(null);
+  const [userData, setUserData] = useState(null);
   
   useEffect(() => {
     async function fetchUser() {
-     
-      const user = await getUserData(12); 
-      setUserData(user);
-      console.log(user); 
+      try {
+        const user = await getUserData(18);
+        console.log("Données récupérées:", user);
+        setUserData(user);
+      } catch (err) {
+        console.error("Erreur:", err);
+      }
     }
+    
     fetchUser();
   }, []);
     
@@ -21,7 +26,24 @@ function Profile () {
     <>
       <Header />
       <NavBar />
-      <h1>Bonjour {userData.userInfos.firstName}</h1>
+
+      {userData ? (
+        <div className="container">
+
+        <div className="container__title">
+          <h1>Bonjour <span className="container__title__name">{userData.userInfos.firstName}</span></h1>
+        </div>
+
+        <div className="container__dashboard">
+          <p>Félicitation ! Vous avez explosé vos objectifs hier ! 👏</p>
+        </div>
+
+      </div>
+      ) : (
+        <p>Chargement des données...</p>
+      )}
+      
+     
     </>
   );
 }

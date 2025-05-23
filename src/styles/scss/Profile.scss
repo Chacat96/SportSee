@@ -1,0 +1,11 @@
+.container {
+    margin: 30px 200px;
+    font-family: "Roboto", sans-serif;
+    &__title h1 {
+        margin-bottom: 20px;
+
+    }
+    &__title__name {
+        color: red;
+    }
+}
