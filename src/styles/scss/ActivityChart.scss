@@ -1,0 +1,45 @@
+.activityChart {
+    background-color: #FBFBFB !important;
+    border-radius: 5px;
+    margin-top: 50px;
+    padding: 20px;
+    
+    &__title {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+
+    h2 {
+        font-weight: 500;
+        font-size: 15px;
+        background-color: #FBFBFB;
+    }
+
+        &__legend {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            p {
+                background-color: #FBFBFB;
+            }
+
+            &__colorBlack {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: black;
+            }
+    
+            &__colorRed {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: red;
+            }
+        }
+
+    }
+}
+
+

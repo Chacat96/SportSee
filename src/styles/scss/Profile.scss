@@ -1,11 +1,28 @@
 .container {
-    margin: 30px 200px;
+    padding: 130px 200px;
     font-family: "Roboto", sans-serif;
+
+    &__graph {
+        display: flex;
+
+        &__chart {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
     &__title h1 {
         margin-bottom: 20px;
 
     }
     &__title__name {
         color: red;
+    }
+
+    &__etiquette {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        margin: 70px 20px;
     }
 }

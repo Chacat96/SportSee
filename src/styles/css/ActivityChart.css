@@ -1,0 +1,36 @@
+.activityChart {
+  background-color: #FBFBFB !important;
+  border-radius: 5px;
+  margin-top: 50px;
+  padding: 20px;
+}
+.activityChart__title {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+.activityChart__title h2 {
+  font-weight: 500;
+  font-size: 15px;
+  background-color: #FBFBFB;
+}
+.activityChart__title__legend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.activityChart__title__legend p {
+  background-color: #FBFBFB;
+}
+.activityChart__title__legend__colorBlack {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+}
+.activityChart__title__legend__colorRed {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+}

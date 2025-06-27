@@ -1,10 +1,24 @@
 .container {
-  margin: 30px 200px;
+  padding: 130px 200px;
   font-family: "Roboto", sans-serif;
+}
+.container__graph {
+  display: flex;
+}
+.container__graph__chart {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .container__title h1 {
   margin-bottom: 20px;
 }
 .container__title__name {
   color: red;
+}
+.container__etiquette {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin: 70px 20px;
 }
