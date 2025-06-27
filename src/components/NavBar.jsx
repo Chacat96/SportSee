@@ -1,3 +1,4 @@
+import React from 'react';
 import haltere from '../assets/icon/haltere.png';
 import natation from '../assets/icon/natation.png';
 import velo from '../assets/icon/velo.png';
