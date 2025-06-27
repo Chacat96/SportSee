@@ -1,0 +1,69 @@
+.charts {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.charts__averageSession {
+  background: linear-gradient(to right, red 70%, #971313);
+  border-radius: 5px;
+  height: 290px;
+}
+.charts__averageSession__title {
+  background: linear-gradient(to right, red 70%, #971313);
+  border-radius: 5px;
+  color: white;
+  opacity: 0.5;
+  font-weight: 400;
+  padding: 20px 20px 0;
+}
+.charts__performance {
+  background-color: #282D30;
+  border-radius: 5px;
+  height: 290px;
+}
+.charts__score {
+  display: flex;
+  flex-direction: column;
+  background-color: #FBFBFB;
+  border-radius: 5px;
+  position: relative;
+  padding: 20px;
+  height: 250px;
+}
+.charts__score h3 {
+  background-color: #FBFBFB;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.charts__score__circle {
+  position: relative;
+  width: 258px;
+  height: 250px;
+}
+.charts__score__percentage {
+  position: absolute;
+  top: 50%;
+  left: 58.1%;
+  transform: translate(-50%, -50%);
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+}
+.charts__score p {
+  background-color: transparent;
+  color: #74798C;
+}
+.charts__score span {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #282D30;
+}
+
+line {
+  stroke: none;
+}
