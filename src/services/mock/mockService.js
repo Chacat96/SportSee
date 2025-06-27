@@ -2,7 +2,7 @@ import { userData, performanceData, activityData, averageSessionsData } from './
 
 export async function getUserData(userId) {
   const user = userData.find(user => user.id === userId);
-  return user; // Retourne directement l'utilisateur trouvé, pas besoin de .data
+  return user; 
 }
 
 export async function getAverageSessions(userId) {
