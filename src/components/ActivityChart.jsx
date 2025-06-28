@@ -29,10 +29,10 @@ function ActivityChart ({data}) {
             </div>
             
             <BarChart width={900} height={250} data={data}>
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="day" tickFormatter={(_, index) => index + 1} />
-            <YAxis orientation="right" axisLine={false}/>
-            <Tooltip content={<TooltipsActivity/>}           
+            <CartesianGrid strokeDasharray="3 3" vertical={false}/>
+            <XAxis dataKey="day" tickFormatter={(_, index) => index + 1} axisLine={false}  tickLine={false} tickMargin={10}/>
+            <YAxis orientation="right" axisLine={false}  tickLine={false} tickMargin={10}/>
+            <Tooltip content={<TooltipsActivity />}           
             />
             <Bar dataKey="kilogram" fill="#dark" radius={[10, 10, 0, 0]}/>
             <Bar dataKey="calories" fill="#FF0000" radius={[10, 10, 0, 0]}/>
