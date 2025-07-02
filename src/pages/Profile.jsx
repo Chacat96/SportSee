@@ -45,10 +45,10 @@ function Profile () {
       } catch (err) {
         console.error("Erreur:", err);
       }
-    }
-    
+    }    
     fetchUser();
   }, [id]);
+
     
   return (
     <>

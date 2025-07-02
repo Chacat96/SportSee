@@ -1,14 +1,30 @@
 .container {
-  padding: 130px 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: calc(100vh - 80px);
+  width: calc(100vw - 120px);
+  padding: 50px 20px;
+  box-sizing: border-box;
+  margin-left: 130px;
+  margin-top: 110px;
   font-family: "Roboto", sans-serif;
 }
 .container__graph {
   display: flex;
+  width: 100%;
+  max-width: 1200px;
 }
 .container__graph__chart {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  flex: 1;
+}
+.container__title {
+  width: 100%;
+  max-width: 1200px;
 }
 .container__title h1 {
   margin-bottom: 20px;
@@ -16,9 +32,15 @@
 .container__title__name {
   color: red;
 }
+.container__dashboard {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 20px;
+}
 .container__etiquette {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 80px;
-  margin: 70px 20px;
+  margin: 50px 20px 20px 20px;
 }
