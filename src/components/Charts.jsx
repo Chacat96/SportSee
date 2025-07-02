@@ -17,6 +17,7 @@ import {
     Cell
   } from "recharts";
 import '../styles/css/Charts.css';
+import TooltipsSessions from "./TooltipsSessions";
 
 
 function Charts ({averageSessionData, performanceData, scoredata}) {
@@ -52,9 +53,9 @@ function Charts ({averageSessionData, performanceData, scoredata}) {
                 <LineChart width={300} height={210} data={averageSessionData.sessions}
                 margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" stroke="none" vertical={false} horizontal={false}/>
-                <XAxis dataKey="day" axisLine={false} tickFormatter={formatDayLabel} tick={{fill: 'white', opacity: 0.5}}/>
-                <YAxis hide= {true} dot= {false}/>
-                <Tooltip />
+                <XAxis dataKey="day" axisLine={false} tickMargin={10} tickLine={false} tickFormatter={formatDayLabel} tick={{fill: 'white', opacity: 0.5}}/>
+                <YAxis hide= {true} dot= {false} />
+                <Tooltip content={<TooltipsSessions/>}/>
                 <Line type="monotone" dataKey="sessionLength" stroke="#FFFF" />
                 </LineChart>    
             </div>

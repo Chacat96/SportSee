@@ -9,6 +9,7 @@
     // height: calc(100vh - 80px);
     height: 100%;
     background-color: black;
+    z-index: 1;
 
     &__icon {
         display: flex;
