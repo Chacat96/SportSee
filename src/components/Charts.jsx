@@ -82,6 +82,7 @@ function Charts ({averageSessionData, performanceData, scoredata}) {
                 innerRadius={70} 
                 startAngle={90} 
                 endAngle={450}
+                cornerRadius={10}
             >
                 {pieData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={index === 0 ? "#FF0000" : "rgba(255, 255, 255, 0.1)"} />

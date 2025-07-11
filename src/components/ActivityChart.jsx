@@ -27,16 +27,18 @@ function ActivityChart ({data}) {
                     <span className="activityChart__title__legend__colorRed"></span><p>Calories brûlées (kCal)</p>
                 </div>
             </div>
-            
-            <BarChart width={900} height={250} data={data}>
+
+            <ResponsiveContainer width="100%" height={250}>
+            <BarChart data={data}>
             <CartesianGrid strokeDasharray="3 3" vertical={false}/>
             <XAxis dataKey="day" tickFormatter={(_, index) => index + 1} axisLine={false}  tickLine={false} tickMargin={10}/>
             <YAxis orientation="right" axisLine={false}  tickLine={false} tickMargin={10}/>
             <Tooltip content={<TooltipsActivity />}           
             />
-            <Bar dataKey="kilogram" fill="#dark" radius={[10, 10, 0, 0]}/>
-            <Bar dataKey="calories" fill="#FF0000" radius={[10, 10, 0, 0]}/>
+            <Bar dataKey="kilogram" fill="#dark" radius={[10, 10, 0, 0]} maxBarSize={20}/>
+            <Bar dataKey="calories" fill="#FF0000" radius={[10, 10, 0, 0]} maxBarSize={20}/>
             </BarChart>
+            </ResponsiveContainer>
         </div>
         </>
     )
