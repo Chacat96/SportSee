@@ -1,4 +1,3 @@
-import React from "react";
 import {
     BarChart,
     Bar,
@@ -6,11 +5,7 @@ import {
     YAxis,
     CartesianGrid,
     Tooltip,
-    Legend,
-    LineChart,
-    Line,
     ResponsiveContainer
-
   } from "recharts";
 import '../styles/css/ActivityChart.css';
 import TooltipsActivity from "./TooltipsActivity";

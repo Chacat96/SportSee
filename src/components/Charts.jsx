@@ -21,6 +21,12 @@ import TooltipsSessions from "./TooltipsSessions";
 
 
 function Charts ({averageSessionData, performanceData, scoredata}) {
+
+    /**
+     * Returns a day of the week in french, given its number (1-7)
+     * @param {number} day - The number of the day (1-7)
+     * @returns {string} The day of the week in french (e.g. 'L' for Monday)
+     */
     const formatDayLabel = (day) => {
         const dayMap = {
             1: 'L',
@@ -40,6 +46,7 @@ function Charts ({averageSessionData, performanceData, scoredata}) {
       }));
     
       const scorePercent = scoredata * 100;
+      
       const pieData = [
           { name: "Score", value: scorePercent },
           { name: "Reste", value: 100 - scorePercent },
