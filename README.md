@@ -12,7 +12,7 @@ L’objectif est de recréer la **page profil d’un utilisateur** pour l’appl
 ### 1. Cloner le dépôt
 
 ```bash
-git clone https://github.com/ton-pseudo/sportsee-profil.git
+git clone https://github.com/Chacat96/SportSee.git
 cd sportsee
 ```
 
@@ -41,7 +41,7 @@ Le front sera disponible sur [http://localhost:5173](http://localhost:5173) *(po
 
 ```bash
 git clone https://github.com/OpenClassrooms-Student-Center/P9-front-end-dashboard.git sportsee-api
-cd sportsee
+cd sportsee/SportSee
 ```
 
 ### 2. Installer les dépendances
