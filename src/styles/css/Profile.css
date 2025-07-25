@@ -44,3 +44,12 @@
   gap: 80px;
   margin: 50px 20px 20px 20px;
 }
+
+.container__responsive {
+  width: 100%;
+  margin-right: 20px;
+}
+.container__responsive__etiquetteResponsive {
+  display: flex;
+  justify-content: space-between;
+}

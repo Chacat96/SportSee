@@ -49,3 +49,13 @@
         margin: 50px 20px 20px 20px;
     }
 }
+
+.container__responsive {
+    width: 100%;
+    margin-right: 20px;
+
+    &__etiquetteResponsive {
+        display: flex;
+        justify-content: space-between;
+    }
+}
