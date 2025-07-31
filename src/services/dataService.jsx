@@ -1,6 +1,6 @@
 import { getUserData as getMockUserData, getActivity as getMockActivity, getAverageSessions as getMockAverageSessions, getPerformance as getMockPerformance } from './mock/mockService';
 
-const USE_MOCK_DATA = false; 
+const USE_MOCK_DATA = true; 
 
 const baseURL = 'http://localhost:3000/user';
 
@@ -18,7 +18,7 @@ async function getApiUserData(userId) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const result = await response.json();
-        return result.data; // Supposant que l'API retourne { data: ... }
+        return result.data; 
     } catch (error) {
         console.error('Error fetching user data:', error);
         throw error;
