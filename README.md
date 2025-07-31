@@ -81,6 +81,7 @@ L’API sera disponible sur : [http://localhost:3000](http://localhost:3000)
 - Données issues de mock local **ou** d’une **API NodeJS**
 - Standardisation des données pour correspondre aux maquettes
 - Affichage conditionnel si les données ne sont pas disponibles
+- Changer d'utilisateur : 12 ou 18 dans l'url
 
 ---
 
