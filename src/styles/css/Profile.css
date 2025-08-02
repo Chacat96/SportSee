@@ -4,7 +4,6 @@
   align-items: center;
   justify-content: flex-start;
   min-height: calc(100vh - 80px);
-  width: calc(100vw - 120px);
   padding: 50px 20px;
   box-sizing: border-box;
   margin-left: 130px;

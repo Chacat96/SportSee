@@ -1,6 +1,6 @@
 import { getUserData as getMockUserData, getActivity as getMockActivity, getAverageSessions as getMockAverageSessions, getPerformance as getMockPerformance } from './mock/mockService';
 
-const USE_MOCK_DATA = true; 
+const USE_MOCK_DATA = false; 
 
 const baseURL = 'http://localhost:3000/user';
 

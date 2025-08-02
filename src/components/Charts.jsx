@@ -18,6 +18,7 @@ import {
   } from "recharts";
 import '../styles/css/Charts.css';
 import TooltipsSessions from "./TooltipsSessions";
+import CursorLineChart from "./CursorLineChart";
 
 
 function Charts ({averageSessionData, performanceData, scoredata}) {
@@ -55,17 +56,59 @@ function Charts ({averageSessionData, performanceData, scoredata}) {
     return (
         <>
         <div className="charts">
-            <div className="charts__averageSession">
-                <h3 className="charts__averageSession__title">Durée moyenne des <br />sessions</h3>
-                <LineChart width={300} height={210} data={averageSessionData.sessions}
-                margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                <CartesianGrid strokeDasharray="3 3" stroke="none" vertical={false} horizontal={false}/>
-                <XAxis dataKey="day" axisLine={false} tickMargin={10} tickLine={false} tickFormatter={formatDayLabel} tick={{fill: 'white', opacity: 0.5}}/>
-                <YAxis hide= {true} dot= {false} />
-                <Tooltip content={<TooltipsSessions/>}/>
-                <Line type="monotone" dataKey="sessionLength" stroke="#FFFF" />
-                </LineChart>    
-            </div>
+
+<div className="charts__averageSession">
+    <LineChart 
+        width={300} 
+        height={290} 
+        data={averageSessionData.sessions}
+        margin={{ top: 100, right: 0, left: 0, bottom: 5 }} 
+    >
+        <CartesianGrid strokeDasharray="3 3" stroke="none" vertical={false} horizontal={false}/>
+        <XAxis 
+            dataKey="day" 
+            axisLine={false} 
+            tickMargin={10} 
+            tickLine={false} 
+            tickFormatter={formatDayLabel} 
+            tick={{fill: 'white', opacity: 0.5}}
+        />
+        <YAxis hide={true} dot={false} />
+        <Tooltip 
+            cursor={<CursorLineChart />} 
+            content={<TooltipsSessions/>}
+        />
+        <Line 
+            type="monotone" 
+            dataKey="sessionLength" 
+            stroke="#FFFFFF" 
+            strokeWidth={2}
+            dot={false}
+            activeDot={{ r: 4, fill: '#FFFFFF' }}
+        />
+        {/* Titre intégré directement dans le SVG */}
+        <text 
+            x="40" 
+            y="55" 
+            fill="white" 
+            opacity="0.8"
+            fontSize="15" 
+            fontWeight="500"
+        >
+            Durée moyenne des
+        </text>
+        <text 
+            x="40" 
+            y="80" 
+            fill="white"
+            opacity="0.8" 
+            fontSize="15" 
+            fontWeight="500"
+        >
+            sessions
+        </text>
+    </LineChart>
+</div>
 
             <div className="charts__performance">
                 <RadarChart outerRadius={70} width={300} height={290} data={formattedData}>

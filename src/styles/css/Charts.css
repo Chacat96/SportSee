@@ -7,16 +7,9 @@
 }
 .charts__averageSession {
   background: linear-gradient(to right, red 70%, #971313);
+  background: red;
   border-radius: 5px;
   height: 290px;
-}
-.charts__averageSession__title {
-  background: linear-gradient(to right, red 70%, #971313);
-  border-radius: 5px;
-  color: white;
-  opacity: 0.5;
-  font-weight: 400;
-  padding: 20px 20px 0;
 }
 .charts__performance {
   background-color: #282D30;

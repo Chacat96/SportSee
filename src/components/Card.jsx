@@ -9,7 +9,7 @@ function Card ({nutriment, valeur, imgNutriment, bgColor}) {
         <div className="card">
             <div 
             className="card__img"
-            style={{ backgroundColor: bgColor }}
+            style={{ backgroundColor: `${bgColor}1A` }}
             >
                 <img src={imgNutriment} alt=""  />
             </div>

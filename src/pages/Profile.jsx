@@ -44,19 +44,15 @@ function Profile () {
         const userId = id ? parseInt(id) : 12;
 
         const user = await getUserData(userId);
-        console.log("Données user récupérées:", user);
         setUserData(user);
 
         const activity = await getActivity(userId);
-        console.log("Données récupérées activity:", activity);
         setUserActivity(activity);
 
         const averageSessions = await getAverageSessions(userId);
-        console.log("Données récupérées averageSessions:", averageSessions);
         setAverageSessionsData(averageSessions);
 
         const performance = await getPerformance(userId);
-        console.log("Données récupérées performance:", performance);
         setPerformanceData(performance);
 
       } catch (err) {
@@ -122,32 +118,32 @@ function Profile () {
         {isResponsive ? (
 
           // Vue responsive 
-
+          
           <div className="container__responsive">
             <div className="container__responsive__etiquetteResponsive">
-              <Card 
+            <Card 
                 nutriment="Calories" 
                 valeur={`${userData.keyData.calorieCount}kCal`} 
                 imgNutriment={calorieIcon}
-                bgColor="#FBE6D9"
+                bgColor="#FF0000"
               />
               <Card 
                 nutriment="Protéines" 
                 valeur={`${userData.keyData.proteinCount}g`} 
                 imgNutriment={proteinIcon}
-                bgColor="#FBE6D9"
+                bgColor="#4AB8FF"
               />
               <Card 
                 nutriment="Glucides" 
                 valeur={`${userData.keyData.carbohydrateCount}g`} 
                 imgNutriment={glucideIcon}
-                bgColor="#FBE6D9"
+                bgColor="#F9CE23"
               />
               <Card 
                 nutriment="Lipides" 
                 valeur={`${userData.keyData.lipidCount}g`} 
                 imgNutriment={lipideIcon}
-                bgColor="#FBE6D9"
+                bgColor="#FD5181"
               />
             </div>
             
@@ -199,29 +195,29 @@ function Profile () {
             </div>
             
             <div className="container__etiquette">
-              <Card 
+            <Card 
                 nutriment="Calories" 
                 valeur={`${userData.keyData.calorieCount}kCal`} 
                 imgNutriment={calorieIcon}
-                bgColor="#FBE6D9"
+                bgColor="#FF0000"
               />
               <Card 
                 nutriment="Protéines" 
                 valeur={`${userData.keyData.proteinCount}g`} 
                 imgNutriment={proteinIcon}
-                bgColor="#FBE6D9"
+                bgColor="#4AB8FF"
               />
               <Card 
                 nutriment="Glucides" 
                 valeur={`${userData.keyData.carbohydrateCount}g`} 
                 imgNutriment={glucideIcon}
-                bgColor="#FBE6D9"
+                bgColor="#F9CE23"
               />
               <Card 
                 nutriment="Lipides" 
                 valeur={`${userData.keyData.lipidCount}g`} 
                 imgNutriment={lipideIcon}
-                bgColor="#FBE6D9"
+                bgColor="#FD5181"
               />
             </div>
           </div>

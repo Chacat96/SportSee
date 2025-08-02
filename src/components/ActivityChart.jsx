@@ -24,14 +24,14 @@ function ActivityChart ({data}) {
             </div>
 
             <ResponsiveContainer width="100%" height={250}>
-            <BarChart data={data}>
+            <BarChart data={data} barCategoryGap="30%">
             <CartesianGrid strokeDasharray="3 3" vertical={false}/>
             <XAxis dataKey="day" tickFormatter={(_, index) => index + 1} axisLine={false}  tickLine={false} tickMargin={10}/>
             <YAxis orientation="right" axisLine={false}  tickLine={false} tickMargin={10}/>
             <Tooltip content={<TooltipsActivity />}           
             />
-            <Bar dataKey="kilogram" fill="#dark" radius={[10, 10, 0, 0]} maxBarSize={20}/>
-            <Bar dataKey="calories" fill="#FF0000" radius={[10, 10, 0, 0]} maxBarSize={20}/>
+            <Bar dataKey="kilogram" fill="#dark" radius={[10, 10, 0, 0]} maxBarSize={10}/>
+            <Bar dataKey="calories" fill="#FF0000" radius={[10, 10, 0, 0]} maxBarSize={10}/>
             </BarChart>
             </ResponsiveContainer>
         </div>
