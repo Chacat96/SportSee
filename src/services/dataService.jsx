@@ -1,6 +1,6 @@
 import { getUserData as getMockUserData, getActivity as getMockActivity, getAverageSessions as getMockAverageSessions, getPerformance as getMockPerformance } from './mock/mockService';
-
-const USE_MOCK_DATA = false; 
+import { formatUserData, formatActivityData, formatAverageSessionsData, formatPerformanceData } from '../utils/dataFormatter';
+const USE_MOCK_DATA = true; 
 
 const baseURL = 'http://localhost:3000/user';
 
@@ -18,7 +18,7 @@ async function getApiUserData(userId) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const result = await response.json();
-        return result.data; 
+        return formatUserData(result.data);
     } catch (error) {
         console.error('Error fetching user data:', error);
         throw error;
@@ -38,7 +38,7 @@ async function getApiActivity(userId) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const result = await response.json();
-        return result.data;
+        return formatActivityData(result.data);
     } catch (error) {
         console.error('Error fetching activity data:', error);
         throw error;
@@ -58,7 +58,7 @@ async function getApiAverageSessions(userId) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const result = await response.json();
-        return result.data;
+        return formatAverageSessionsData(result.data);
     } catch (error) {
         console.error('Error fetching average sessions data:', error);
         throw error;
@@ -78,7 +78,7 @@ async function getApiPerformance(userId) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const result = await response.json();
-        return result.data;
+        return formatPerformanceData(result.data);
     } catch (error) {
         console.error('Error fetching performance data:', error);
         throw error;

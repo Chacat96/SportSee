@@ -160,7 +160,7 @@ function Profile () {
                   <Charts 
                     averageSessionData={averageSessionsData} 
                     performanceData={performanceData} 
-                    scoredata={userData.score || userData.todayScore}
+                    scoredata={userData.score}
                   />
                 ) : (
                   <p>Chargement des graphiques...</p>
@@ -186,7 +186,7 @@ function Profile () {
                   <Charts 
                     averageSessionData={averageSessionsData} 
                     performanceData={performanceData} 
-                    scoredata={userData.score || userData.todayScore}
+                    scoredata={userData.score}
                   />
                 ) : (
                   <p>Chargement des graphiques...</p>
