@@ -23,7 +23,7 @@ function Profile () {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const isResponsive = size < 1370;
+  const isResponsive = size < 1023;
 
   useEffect(() => {
     const handleResize = () => {

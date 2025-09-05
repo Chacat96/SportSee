@@ -61,6 +61,12 @@
 
 @media screen and (max-width: 1370px) {
   .charts {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .charts {
     justify-content: center;
   }
 }
